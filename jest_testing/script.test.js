@@ -14,3 +14,8 @@ it("is running", () => {
 it("it is working", () => {
   expect(googleSearch("dog", dbMock)).toEqual(['dogs.com', 'dogpictures.com']);
 });
+
+it("works with undefines  and null input", () => {
+  expect(googleSearch(undefined, dbMock)).toEqual([]);
+  expect(googleSearch(null, dbMock)).toEqual([]);
+});
