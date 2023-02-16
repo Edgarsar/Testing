@@ -19,3 +19,7 @@ it("works with undefines  and null input", () => {
   expect(googleSearch(undefined, dbMock)).toEqual([]);
   expect(googleSearch(null, dbMock)).toEqual([]);
 });
+
+it("oes not return more than 3 matches'", () => {
+  expect(googleSearch(".com", dbMock).length).toEqual(3);
+});
